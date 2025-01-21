@@ -297,6 +297,10 @@ nav ul li a:hover {
     z-index: 1001;
 }
 
+.grid-item2 p {
+    font-size: 22px;
+}
+
 #site-info {
     background: linear-gradient(#333, #601813);
     text-align: center;
