@@ -1,0 +1,381 @@
+@font-face {
+    font-family: 'Newsreader';
+    src: url('https://raw.githubusercontent.com/kvikksam/eit/fonts/Newsreader-VariableFont_opsz%2Cwght.ttf');
+}
+
+@font-face {
+    font-family: 'Noto_Serif';
+    src: url('https://raw.githubusercontent.com/kvikksam/eit/fonts/NotoSerif-VariableFont_wdth%2Cwght.ttf');
+}
+
+@font-face {
+    font-family: 'Butler';
+    src: url('https://raw.githubusercontent.com/kvikksam/eit/fonts/Butler-ExtraBold.woff');
+}
+
+@font-face {
+    font-family: 'Castoro';
+    src: url('https://raw.githubusercontent.com/kvikksam/eit/fonts/CastoroTitling-Regular.ttf');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    width: 100%;
+}
+
+body h1 {
+    font-family: 'Newsreader';
+    font-size: 60px;
+    font-style: italic;
+    color: white;
+    text-align: left;
+    margin: 0;
+    padding: 10px;
+    padding-left: 20px;
+}
+
+body h3 {
+    font-family: 'Butler';
+    font-size: 30px;
+    color: #333;
+    text-align: left;
+    margin: 0;
+    padding: 10px;
+}
+
+body p {
+    font-family: 'Noto_Serif';
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+header {
+    height: 30px;
+    background-color: #333;
+    padding: 15px 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .logo {
+    flex-grow: 1;
+    text-align: center;
+}
+
+header .logo a {
+    font-family: 'Butler';
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+}
+
+header .buttons {
+    display: flex;
+    gap: 8px;
+    position: absolute;
+    left: 8px;
+}
+
+header .buttons button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-family: Noto_Serif;
+    font-size: 16px;
+    border-radius: 0;
+    transition: background-color 0.3s ease;
+}
+
+header .buttons button:hover {
+    background-color: #a30707;
+}
+
+@media (max-width: 768px) {
+    header .buttons {
+        display: flex;
+        gap: 4px;
+        position: absolute;
+        left: 6px;
+    }
+
+    header .buttons button {
+        padding: 5px 5px;
+        font-size: 12px;
+    }
+}
+
+#nav-toggle {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 30px;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    display: block; 
+    z-index: 1001;
+}
+
+nav {
+    position: absolute; /* Add this line to fix the navigation bar */
+    width: 100%; /* Ensure the nav bar spans the full width */
+    top: 0; /* Align it to the top */
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 10px;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #333;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+#nav.nav-collapsed ul {
+    display: none; /* Hide the navigation list when collapsed */
+}
+ 
+/* Responsive styles */
+@media (max-width: 768px) {
+    #nav-toggle {
+        display: block; /* Show the nav toggle button on smaller screens */
+    }
+
+    nav ul {
+        flex-direction: column; /* Change to column for smaller screens */
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    #nav.nav-collapsed ul {
+        display: none; /* Hide the navigation list when collapsed */
+    }
+}
+
+#title1, #title2, #title3 {
+    font-family: 'Castoro';
+    font-size: 30px;
+    color: #e00f0f;
+    text-align: center;
+    margin: 0;
+    padding-top: 2vw;
+    padding-bottom: 1vw;
+}
+
+#title1 {
+    background-color: #601813;
+}
+
+#title2 {
+    background-color: #333;
+}
+
+#title3 {
+    background-color: #333;
+}
+
+#grid1 {
+    background: linear-gradient(#601813, #333);
+}
+
+/* First grid: 4 by 2 layout */
+.first-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    text-shadow: 1px 2px BLACK
+}
+
+@media (max-width: 768px) {
+    .first-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+}
+
+/* Second grid: 2 by 2 layout */
+.second-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    text-shadow: 1px 2px BLACK
+}
+
+@media (max-width: 768px) {
+    .second-grid {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+}
+
+/* Ensure grid items fit within the grid */
+.grid-item1, .grid-item2 {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid-item1::after, .grid-item2::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0); /* Initial transparent background */
+    pointer-events: none; /* Ensure the overlay doesn't interfere with other interactions */
+    transition: background-color 0.8s ease; /* Add transition for smooth effect */
+}
+
+.grid-item1:hover::after, .grid-item2:hover::after {
+    background-color: rgba(0, 0, 0, 0.5); /* Change to desired overlay color on hover */
+}
+
+.grid-item1 {
+    height: auto;
+}
+
+.grid-item2 {
+    aspect-ratio: 3 / 1;
+}
+  
+/* Make images responsive */
+.grid-item1 img, .grid-item2 img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.grid-item1 p, .grid-item2 p {
+    font-family: 'Butler';
+    color: aliceblue;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin: 0;
+    z-index: 1001;
+}
+
+#site-info {
+    background: linear-gradient(#333, #601813);
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+#site-info h2 {
+    font-family: 'Butler';
+    font-size: 20px;
+    color: white;
+}
+
+#site-info p {
+    font-family: 'Noto_Serif';
+    font-size: 15px;
+    color: #fff6f6;
+}
+
+footer {
+    background: linear-gradient(#601813, #333);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+footer h2 {
+    font-family: 'Butler';
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+}
+
+footer a {
+    font-family: 'Noto_Serif';
+    font-size: 15px;
+    text-decoration: underline;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+}
+
+footer a:hover {
+    color: #a30707;
+}
+
+footer p {
+    font-family: 'Noto_Serif';
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer .footer-content-sub {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 10px;
+}
+
+.footer-section.about, .footer-section.links {
+    min-width: 200px; /* Adjust as needed */
+}
