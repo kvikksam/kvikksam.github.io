@@ -1,0 +1,216 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Cache-control" content="public">
+  <title>Nervous System</title>
+  <link rel="stylesheet" href="css/nervous_system.css">
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <div class="buttons">
+            <button id="english_lang">English</button>
+            <button id="norwegian_lang">Norsk</button>
+        </div>
+        <div class="logo">
+            <a href="index.html" class="logo1">Anatomical Collection.</a>
+        </div>
+        <button id="nav-toggle" onclick="toggleNav()">☰</button>
+        <nav id="nav" class="nav-collapsed">
+            <ul class="nav-text">
+                <li><a href="process.html">Specimen Conservation</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="donor.html">About Body Donation</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="main">
+        <div id="button_container">
+            <button id="back_button" onclick="window.location.href='about.html'">< Back</button>
+            <button id="next_button" onclick="window.location.href='cardiovascular_system.html'"> Next ></button>
+        </div>
+            <section id="title1">
+            <h1>Nervous System</h1>
+        </section>
+        <section id="model">
+            <div id="modelviewer-container">
+                <div id="modelviewer-intro">
+                    <p>
+                        The nervous system is your body’s command center and is the major controlling, regulatory  and communicating system in the body. The nervous system has two main parts; the central nervous system, which is composed of the brain and the spinal cord, and the peripheral nervous system, which contains a network of nerves that branch off from the spinal cord and extend to all parts of the body. The central nervous system is mainly busy with how you think, move and feel. The peripheral nervous system is the system that relays information from your brain and spinal cord to your organs and extremities, such as your arms, legs, fingers and toes.
+                    </p>
+                </div>
+                <div id="modelviewer">
+                    <model-viewer
+                        id="modelviewer"
+                        alt="A 3D model of the cardiovascular system"
+                        src="https://raw.githubusercontent.com/kvikksam/eit/models/human-brain.glb"
+                        camera-controls
+                    ></model-viewer>
+                </div>
+            <div id="modelviewer-container"></div>
+        </section>
+        <section id="modelviewer-text">
+                <button class="expand-btn" onclick="toggleArticle('article1')">^ General info</button>
+                <div id="article1" class="article-content">
+                    <p>
+                        Have you ever wondered how your brain sound? Listen to the sound of an anterior cingulate interneuron firing an action potential:
+                    </p>
+                    <iframe width="100%" height="140" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/271648076&color=277dca"></iframe><div style="font-size: 10px; color: #c97784;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/blake_porter_neuro" target="_blank" style="color: #c97784; text-decoration: none;"></a> · <a href="https://soundcloud.com/blake_porter_neuro/anterior-cingulate-interneuron" title="Anterior Cingulate Interneuron" target="_blank" style="color: #c97784; text-decoration: none;"></a></div>
+                    <p>
+                        Did you know that all things you do in your daily life are regulated by the brain? The nervous system generates and controls movement. It also detects and integrates somatosensory information such as light, sound, odor, taste, pressure and heat. Other parts of the nervous system control involuntary processes. These include keeping a regular heartbeat, releasing hormones, opening the pupil in response to light, and regulating the digestive system. <br /> <br />
+                        The brain also has an impact on the gut. We often trust on our “gut feeling” or the feeling of “butterflies in your stomach”, and this unconsciously highlights the bidirectional connection between the gut and the brain. This gut-brain axis makes it possible for emotional experiences to register as stomach aches. Looking more closely to this, it becomes easier to understand why you might feel nauseous before giving a presentation.  <br /> <br />
+                        Your brain communicates to your body by sending messages, or electrical signals. These signals tell you to move, think and feel. It does this by using nerve cells called neurons. There are over 100 billion neurons in the human brain, and they are all connected in many networks of communicating neurons. Did you know that when neurons fire an action potential, the electrical signal that allows neurons to communicate, they make a popping sound? <br /> <br />
+                        Neurons can make connections across various distances. It does this by extending their axons. They can make short connections within your brain to make local circuits, where parts of your brain communicate to other parts with different functions. Neurons can also be up to 1 meter long. One example is the sciatic nerve which starts just outside of your spine and then travels all the way down your legs. <br /> <br />
+                        These connections are very dynamic and change upon maturing. They can strengthen their connections when you keep stimulating them, but some connections may also disappear when you are not using them. This is different for every person and depends for example your interests and hobbies, such as playing the piano, reading books, or playing videogames. This has also to do with how you mature. Some activities you do as a child, you do not need upon aging. While upon aging, you are constantly learning new things and new connections have to be formed. A very famous quote that you may have heard before is the one by Hebb: “Neurons that fire together wire together”. This wiring happens because of the limited space in the brain and thus we have to make efficient connections in a cost-effective manner. What do you think stimulates your brain?  
+                    </p>
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/ihi3uhuRLBk?si=OaOxOYywfUHIeOQ6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+        </section>
+        <section id="title2">
+            <h1>List of Specimens</h1>
+        </section>
+        <section id="articles">
+            <p id="article-description">
+                Here are a list of all the specimens related to the cardiovascular system. Click on the different specimens to learn more!
+            </p>
+            <div id="expandable-articles">
+                <button class="expand-btn" onclick="toggleArticle('article2')">^ Specimen 164 - brain bleed</button>
+                <div id="article2" class="article-content">
+                    <p>
+                        This artefact shows a wet specimen of a brain that shows a hemorrhage in the left ventricle, which bursts into the brain tissue and breaks into the ventricular system and also into parts of the right hemisphere, which is the right side of the brain. The ventricular system is a series of interconnecting spaces and channels within the brain which functions to produce and circulate cerebrospinal fluid. <br /> <br />
+                        An intracranial hemorrhage, well-known as a brain bleed, is a type of stroke. Your brain contains a series of blood vessels which supply your brain with oxygen and nutrients. When a brain bleed occurs, a blood vessel leaks blood or bursts. This blood accumulation causes pressure against your brain, preventing oxygen and nutrients from reaching your brain tissues and cells.   <br /> <br />
+                        This brain belonged to a 68 years old male which was previously healthy. The most important cause of cerebral hemorrhage is elevated blood pressure. It is assumed that the pressure destroys the wall of the blood vessels so that bleeding occurs. Other causes may be reduced coagulation ability, treatment with blood thinning drugs, head trauma, malformations of the blood vessels and brain tumors.  <br /> <br />
+                        The severity of brain bleeds depend on its cause, the location and size of the bleed, and the amount of time that passes between the bleed and treatment. They can lead to paralysis or death, but can, if detected in time, be treated in a hospital. This male suffered from a high blood pressure of 200/115 and was found dead in bed 11 days after admission to the hospital. Normal blood pressure is less than 120 over less than 80. <br /> <br />
+                        More than 30.2 per 100,000 people suffer from a brain bleed in Norway, and symptoms vary based on the type. Symptoms may include numbness or paralysis of your face, a sudden severe headache, nausea and vomiting, confusion, dizziness, and slurred speech. Most people who experience a brain bleed note that the first symptom is a sudden, painful headache. This patient indeed felt unwell and had pressure in the head which continued throughout the day and into the night. When he went to the toilet, he was unable to stand on his right leg, and he was admitted under the diagnosis of stroke. On arrival he was paretic on the right side, facial paresis on the right side, relatively unaffected speech.  <br /> <br />
+                        A brain bleed can affect anyone at any age, but adults over age 65 are more vulnerable. Moreover, you may be more at risk if you experience high blood pressure, substance use disorder, smoking, having to take blood thinners (anticoagulants), have pregnancy and childbirth-related conditions, or conditions that affect your blood vessel walls.
+                    </p>
+                </div>
+                <button class="expand-btn" onclick="toggleArticle('article3')">^ Specimen 191 - corosion casting</button>
+                <div id="article3" class="article-content">
+                    <p>
+                        This artefact shows a corrosion cast on the left side of the brain and a plastination technique used for the right side of the brain. The corrosion cast depicts the brain blood supply networks in red.  <br /> <br />
+                        These blood vessels supply the brain with oxygen and nutrients so that the brain is able to function properly. This exchange of oxygen needs to be well regulated in order to prevent harmful things, such as toxins, from reaching the brain. This “gatekeeper” is called the blood-brain barrier and is formed by endothelial cells lining the inside of your brain’s blood vessels. These cells are found throughout your whole body and are the once that come into direct contact with your blood. Together they form the endothelium which can cover 3.000 to 6.000 m² of your body. The endothelial cells are very densely packed together so that there is almost no space for anything to slip through without help. If large or water-soluble molecules – including nutrients – need to get through, they need help of special transportation receptors to get across.  <br /> <br />
+                        <img src="https://raw.githubusercontent.com/kvikksam/eit/pictures/brain-biorender.png" alt="Description of the image"> 
+                        The brain is very vulnerable to ischemia, which is an inadequate blood supply. Some vulnerable brain cells start dying less than 5 minutes after their oxygen supply disappears. This can rapidly result in severe brain damage or even death, and the longer your brain lacks oxygen, the more likely you will have brain damage.   
+                    </p>
+                </div>
+                <button class="expand-btn" onclick="toggleArticle('article4')">^ Specimen 295</button>
+                <div id="article4" class="article-content">
+                    <p>
+                        This artefact is produced by the technique wet specimen and shows the human brain’s cerebral cortex. Its colors highlight the brain’s four principal lobes: frontal, parietal, temporal and occipital. Each lobe plays an unique and essential role in shaping how we think, feel, and interact with our environment.  <br /> <br />
+                        The red region represents the frontal lobe, your brain’s control center for decision-making, emotions, speech production, and body movement. Key areas within this lobe include the motor cortex, responsible for coordinating body movements, the prefrontal cortex, responsible for complex functions such as reasoning, planning and problem-solving, and Broca’s area, which is the area involved in spoken language. <br /> <br />
+                        The dark blue region represents the parietal lobe, which is central to processing sensory information and spatial awareness. It is here where your somatosensory cortex is located. This area interprets sensory information across your whole body, such as touch, pressure, and pain. <br /> <br />
+                        The temporal lobe is represented by the yellow region. Its main function is memory, hearing, and language comprehension. This lobe also processes nonverbal communication, and links sounds to visual images, forming an essential part of how we interpret the world. <br /> <br />
+                        The green area shows the occipital lobe, which specializes in processing and integrating visual information, allowing us to perceive and understand the world through our sight.  <br /> 
+                        Here is an example on how your brain lobes collaborate to let you experience this artefact:  <br /> <br />
+                        The occipital lobe enables you to see the artefact and its vibrant colors. If you reach out to touch it or turn it sideways, the motor cortex in your frontal lobe directs your hand movement. The somatosensory cortex in your parietal lobe then assesses the information delivered through your touch of the artefact. Meanwhile, spatial awareness from the parietal lobe helps you judge how far to reach. The temporal lobe contributes by helping you recall related memories, maybe even links it to what you have learned about brain anatomy. 
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-content-sub">
+                <div class="footer-section about">
+                    <h2>About Us</h2>
+                    <p>This website provides information about various human body systems and specimen.</p>
+                </div>
+                <div class="footer-section links">
+                    <h2>Quick Links</h2>
+                    <ul>
+                        <li><a href="process.html">Specimen Conservation</a></li>
+                        <li><a href="history.html">History</a></li>
+                        <li><a href="donor.html">About Body Donation</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-section-contact">
+                <h2>Contact Us</h2>
+                <p>Email: info@eitwebsite.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2023 EiT Website Project | Designed by Your Group4 - Organs4ever
+        </div>  
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var buttons = document.querySelectorAll('.expand-btn');
+
+            buttons.forEach(function(button) {
+                button.addEventListener('click', function() {
+                    var content = this.nextElementSibling;
+                    var isOpen = this.classList.contains('open');
+
+                    // Close all buttons
+                    buttons.forEach(function(btn) {
+                        btn.classList.remove('open');
+                        var btnContent = btn.nextElementSibling;
+                        if (btnContent && btnContent.classList.contains('article-content')) {
+                            btnContent.style.display = 'none';
+                        }
+                    });
+
+                    // Toggle the clicked button
+                    if (!isOpen) {
+                        this.classList.add('open');
+                        if (content && content.classList.contains('article-content')) {
+                            content.style.display = 'block';
+                        }
+                    }
+                });
+            });
+        });
+
+        const buttons = document.querySelectorAll("#expandable-articles .expand-btn");
+        buttons.forEach((button, index) => {
+            if (index % 2 === 0) {
+                button.style.backgroundColor = "#c99687";
+            } else {
+                button.style.backgroundColor = "#c97784";
+            }
+
+            button.addEventListener('mouseover', function() {
+                this.style.backgroundColor = "#777";
+            });
+
+            button.addEventListener('mouseout', function() {
+                if (index % 2 === 0) {
+                    this.style.backgroundColor = "#c99687";
+                } else {
+                    this.style.backgroundColor = "#c97784";
+                }
+            });
+        });
+    
+
+        function toggleNav() {
+            var nav = document.getElementById("nav");
+            if (nav.classList.contains("nav-collapsed")) {
+                nav.classList.remove("nav-collapsed");
+            } else {
+                nav.classList.add("nav-collapsed");
+            }
+        }
+
+        function toggleArticle(articleId) {
+            var article = document.getElementById(articleId);
+            if (article.style.display === "none" || article.style.display === "") {
+                article.style.display = "block";
+            } else {
+                article.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

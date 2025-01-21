@@ -1,0 +1,164 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Cache-control" content="public">
+  <title>About us</title>
+  <link rel="stylesheet" href="css/about.css">
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <div class="buttons">
+            <button id="english_lang">English</button>
+            <button id="norwegian_lang">Norsk</button>
+        </div>
+        <div class="logo">
+            <a href="index.html" class="logo1">Anatomical Collection.</a>
+        </div>
+        <button id="nav-toggle" onclick="toggleNav()">☰</button>
+        <nav id="nav" class="nav-collapsed">
+            <ul class="nav-text">
+                <li><a href="process.html">Specimen Conservation</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="donor.html">About Body Donation</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="main">
+        <div id="button_container">
+            <button id="back_button" onclick="window.location.href='donor.html'">< Back</button>
+            <button id="next_button" onclick="window.location.href='nervous_system.html'"> Next ></button>
+        </div>
+            <section id="title1">
+            <h1>About Us</h1>
+        </section>
+        <section id="intro">
+            <img src="https://raw.githubusercontent.com/kvikksam/eit/pictures/Bilde%20anatomiutstilling.jpg" class="crop-image" alt="Vit">
+                <p>
+                    A collection that was exclusively accessible to only medical students and practitioners for educational purposes has now been made available to high school students with the aim of engaging the students and creating a hub of functional knowledge. Our anatomical collection consists of various learning materials and artefacts for anatomical studies, using different techniques like plastination, corrosion casting, wet specimens and more for preserving what has been so kindly donated to us. We are inviting students to learn and be inspired in an extraordinary environment in a respectful manner, while challenging you to think about how we as human beings tackle the theme of death. This exhibition would not have been possible without our donors and the curators of the anatomical collection.  
+                </p>
+        </section>
+        <section id="articles">
+            <div id="expandable-articles">
+                <button class="expand-btn" onclick="toggleArticle('article2')">^ Guus Wellesen</button>
+                <div id="article2" class="article-content">
+                    <p>
+                        <img src="https://backends.it.ntnu.no/user-profile-service/rest/files/6bfb774f-a1a4-30aa-bb12-2fc604dabee6" class="crop-image" alt="Guus Wellesen">
+                        Born in the Netherlands, Guus Wellesen, is a prize-winning taxidermist and departmental engineer for the Department of Clinical and Molecular Medicine at NTNU, who has an essential role in the curation of the anatomical collection. Having experience with skeletal articulation since he was 7 years old, he has broad competence and Wellesen’s expertise has extended into more techniques in preserving both animals and human bodies. His attention to detail is prominent in his work, creating not only beautiful but very precise artefacts which has made this collection possible.  
+                    </p>
+                </div>
+                <button class="expand-btn" onclick="toggleArticle('article3')">^ Natalie Field</button>
+                <div id="article3" class="article-content">
+                    <p>
+                        <img src="https://backends.it.ntnu.no/user-profile-service/rest/files/07edff70-9f52-39d1-bbed-9a6e3b86f3ff" class="crop-image" alt="Natalie Field">
+                        With a Bachelor of Technology in Photography and a Master of Fine Arts, South-African born Natalie Field is an interdisciplinary researcher and sci-artist, specializing in the field of speculative taxidermy. Field’s work explores the cultural and societal questions that are raised with how human-made representations of animals influence our behaviours towards the natural world. Field is currently a staff engineer in the Department of Clinical and Molecular Medicine at NTNU, where she is contributing with her expertise to projects that bridge the gap between human-health and environmental well-being. Field’s work has been exhibited internationally in multiple countries such as the US, Italy, Sweden and South-Africa.  
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-content-sub">
+                <div class="footer-section about">
+                    <h2>About Us</h2>
+                    <p>This website provides information about various human body systems and specimen.</p>
+                </div>
+                <div class="footer-section links">
+                    <h2>Quick Links</h2>
+                    <ul>
+                        <li><a href="process.html">Specimen Conservation</a></li>
+                        <li><a href="history.html">History</a></li>
+                        <li><a href="donor.html">About Body Donation</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-section-contact">
+                <h2>Contact Us</h2>
+                <p>Email: info@eitwebsite.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2023 EiT Website Project | Designed by Group4 - Organs4ever
+        </div>  
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var buttons = document.querySelectorAll('.expand-btn');
+
+            buttons.forEach(function(button) {
+                button.addEventListener('click', function() {
+                    var content = this.nextElementSibling;
+                    var isOpen = this.classList.contains('open');
+
+                    // Close all buttons
+                    buttons.forEach(function(btn) {
+                        btn.classList.remove('open');
+                        var btnContent = btn.nextElementSibling;
+                        if (btnContent && btnContent.classList.contains('article-content')) {
+                            btnContent.style.display = 'none';
+                        }
+                    });
+
+                    // Toggle the clicked button
+                    if (!isOpen) {
+                        this.classList.add('open');
+                        if (content && content.classList.contains('article-content')) {
+                            content.style.display = 'block';
+                        }
+                    }
+                });
+            });
+        });
+
+        const buttons = document.querySelectorAll("#expandable-articles .expand-btn");
+        buttons.forEach((button, index) => {
+            if (index % 2 === 0) {
+                button.style.backgroundColor = "#156082";
+            } else {
+                button.style.backgroundColor = "#183266";
+            }
+
+            button.addEventListener('mouseover', function() {
+                this.style.backgroundColor = "#777";
+            });
+
+            button.addEventListener('mouseout', function() {
+                if (index % 2 === 0) {
+                    this.style.backgroundColor = "#156082";
+                } else {
+                    this.style.backgroundColor = "#183266";
+                }
+            });
+        });
+    
+
+        function toggleNav() {
+            var nav = document.getElementById("nav");
+            if (nav.classList.contains("nav-collapsed")) {
+                nav.classList.remove("nav-collapsed");
+            } else {
+                nav.classList.add("nav-collapsed");
+            }
+        }
+
+        function toggleArticle(articleId) {
+            var article = document.getElementById(articleId);
+            if (article.style.display === "none" || article.style.display === "") {
+                article.style.display = "block";
+            } else {
+                article.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

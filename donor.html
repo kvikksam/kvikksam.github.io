@@ -1,0 +1,178 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Cache-control" content="public">
+  <title>About Body Donation</title>
+  <link rel="stylesheet" href="css/donor.css">
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <div class="buttons">
+            <button id="english_lang">English</button>
+            <button id="norwegian_lang">Norsk</button>
+        </div>
+        <div class="logo">
+            <a href="index.html" class="logo1">Anatomical Collection.</a>
+        </div>
+        <button id="nav-toggle" onclick="toggleNav()">☰</button>
+        <nav id="nav" class="nav-collapsed">
+            <ul class="nav-text">
+                <li><a href="process.html">Specimen Conservation</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="donor.html">About Body Donation</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="main">
+        <div id="button_container">
+            <button id="back_button" onclick="window.location.href='history.html'">< Back</button>
+            <button id="next_button" onclick="window.location.href='about.html'"> Next ></button>
+        </div>
+            <section id="title1">
+            <h1>About Body Donation</h1>
+        </section>
+        <section id="intro">
+            <img src="https://raw.githubusercontent.com/kvikksam/eit/pictures/Bilde%20anatomiutstilling.jpg" class="crop-image" alt="Vit">
+                <p>
+                    These artefacts, which you can see in this exhibition, have all been donated by people who wished for their bodies to be used for teaching and research. Just as people can sign up for organ donation, the medical field also allows people to sign up to donate one body after death, for the purpose of research and learning.  
+                </p>
+        </section>
+        <section id="articles">
+            <div id="expandable-articles">
+                <button class="expand-btn" onclick="toggleArticle('article2')">^ More Info</button>
+                <div id="article2" class="article-content">
+                    <p>
+                        To maintain high quality within the medical field, its personnel is dependent on donations from many people to allow medical students to reach a competent level of understanding of anatomy. Anatomy is the knowledge about how the human body is built. A good understanding of this subject is necessary to understand how it in the end functions. <br /> <br />
+                        This is why the subject of anatomy plays a vital role in many educations, within the health care system. Many professions depend on having access to material to study Anatomy. A few of these are Doctors, nurses, physiotherapists, bioengineers and radiographers. Anatomy is a broad subject and complex. Even now in our age, with easy access to books, models and VR, the need to practice on real tissue is vital for learning. Models and VR can only be so detailed and everybody is different. Organs can have different shapes and sizes. And generalizing organs is helpful but practicing on real material makes the student more aware of the challenges that they will face in their practice. <br /> <br />
+                        That's why we must be aware of and respect the artefacts we see in this exhibit. They have been donated by people who wanted to help our society, by letting doctors and students learn more about anatomy. Either by dissections or allowing people to study these artefacts that are on display here. 
+                    </p>
+                </div>
+                <button class="expand-btn" onclick="toggleArticle('article3')">^ How to Donate</button>
+                <div id="article3" class="article-content">
+                    <p>
+                        The donation process is quite simple, just as with signing up for organ donation. You can go to NTNU’s site provided at the bottom of this page and fill out an agreement slip there. <br /> <br />
+                        Keep in mind if that you are signed up for organ donation, that will take priority over body donation. <br /> <br />
+                    </p>
+                    <h2>Would you donate something you no longer need for others? </h2> <br /> <br />
+                    <p>
+                        For more information, contact: <br /> 
+                        NTNU <br />
+                        Institutt for labratoriemedisin, barne- og kvinnesykdommmer <br />
+                        St. Olavs Hispital HF <br />
+                        Universitetssykehuset i Trondheim <br />
+                        7006 Trondheim <br />
+                        Telephone number: 75 57 32 00 / 918 97 9191 <br />
+                        Email: Legemedonasjon@ntnu.no <br /> <br /> <br />
+                        <a href="https://www.ntnu.no/mh/legemedonasjon ">Get more info from NTNU</a>
+
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-content-sub">
+                <div class="footer-section about">
+                    <h2>About Us</h2>
+                    <p>This website provides information about various human body systems and specimen.</p>
+                </div>
+                <div class="footer-section links">
+                    <h2>Quick Links</h2>
+                    <ul>
+                        <li><a href="process.html">Specimen Conservation</a></li>
+                        <li><a href="history.html">History</a></li>
+                        <li><a href="donor.html">About Body Donation</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-section-contact">
+                <h2>Contact Us</h2>
+                <p>Email: info@eitwebsite.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2023 EiT Website Project | Designed by Group4 - Organs4ever
+        </div>  
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var buttons = document.querySelectorAll('.expand-btn');
+
+            buttons.forEach(function(button) {
+                button.addEventListener('click', function() {
+                    var content = this.nextElementSibling;
+                    var isOpen = this.classList.contains('open');
+
+                    // Close all buttons
+                    buttons.forEach(function(btn) {
+                        btn.classList.remove('open');
+                        var btnContent = btn.nextElementSibling;
+                        if (btnContent && btnContent.classList.contains('article-content')) {
+                            btnContent.style.display = 'none';
+                        }
+                    });
+
+                    // Toggle the clicked button
+                    if (!isOpen) {
+                        this.classList.add('open');
+                        if (content && content.classList.contains('article-content')) {
+                            content.style.display = 'block';
+                        }
+                    }
+                });
+            });
+        });
+
+        const buttons = document.querySelectorAll("#expandable-articles .expand-btn");
+        buttons.forEach((button, index) => {
+            if (index % 2 === 0) {
+                button.style.backgroundColor = "#346016";
+            } else {
+                button.style.backgroundColor = "#498921";
+            }
+
+            button.addEventListener('mouseover', function() {
+                this.style.backgroundColor = "#777";
+            });
+
+            button.addEventListener('mouseout', function() {
+                if (index % 2 === 0) {
+                    this.style.backgroundColor = "#346016";
+                } else {
+                    this.style.backgroundColor = "#498921";
+                }
+            });
+        });
+    
+
+        function toggleNav() {
+            var nav = document.getElementById("nav");
+            if (nav.classList.contains("nav-collapsed")) {
+                nav.classList.remove("nav-collapsed");
+            } else {
+                nav.classList.add("nav-collapsed");
+            }
+        }
+
+        function toggleArticle(articleId) {
+            var article = document.getElementById(articleId);
+            if (article.style.display === "none" || article.style.display === "") {
+                article.style.display = "block";
+            } else {
+                article.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
